@@ -8,59 +8,12 @@
       <meta charset="UTF-8">
       <meta name="theme-color" content="#AD7EC2">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link href="vnCSS.css" rel="stylesheet">
 <!--BODY FONT-->
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
-<style>
-    body{
-        background-color: #282828;
-        color:white;
-        padding:10px;
-        font-family: 'Montserrat', sans-serif;
-    }
-   #display-area{
-       width:100%;
-       height: 100%;
-       max-width: 600px;
-       max-height:300px;
-       margin: 10px;
-       padding-bottom: 30px;
-       position: relative;
-       background-repeat: no-repeat;
-  background-size: 100% 100%;
-       
-   }
-   #dspan{
-       opacity: 2;
-   }
-   #display-area #dialog{
-       padding:6px;
-       background-color:grey;
-       height: 50px;
-       width: 100%;
-       position: absolute;
-        bottom: 0;
-        opacity: 0.5;
-   }
-   #c1{
-       position:absolute;
-       bottom: 50;
-       left: 0;
-       display: block;
-       width: 110px;
-   }
-      #c2{
-       position:absolute;
-       bottom: 50;
-       right: 0;
-       float: right;
-       display: block;
-       width: 110px;
-   }
-</style>
 <body>
-<br>
 <!---MAIN-->
  <div id="display-area">
 <img id="c1" src = "pf.jpeg">
@@ -69,9 +22,8 @@
 <p id="dspan"></p>
 </div>
 </div>
-
 <!--SCRIPT-->
-<script type="text/javascript" src="AviRana.json"></script>
+<script type="text/javascript" src="AviRana (1).json"></script>
 <script>
 var n = 0;
     var mydata = JSON.parse(data);
@@ -87,8 +39,11 @@ if (mydata[n].pfp == "none") {
     } else {
 document.getElementById("c1").src = mydata[n].pfp;
 }
-document.getElementById("c2").src = mydata[n].pfp;
-
+if (mydata[n].pfp2 == "none") {
+        document.getElementById("c2").style.display = "none";
+    } else {
+document.getElementById("c2").src = mydata[n].pfp2;
+}
 </script>
 <script>
 function next() {
@@ -107,6 +62,13 @@ if (mydata[n].pfp == "none") {
     } else {
 document.getElementById("c1").style.display = "block";
 document.getElementById("c1").src = mydata[n].pfp;
+}
+//c2
+if (mydata[n].pfp2 == "none") {
+        document.getElementById("c2").style.display = "none";
+    } else {
+        document.getElementById("c2").style.display = "block";
+document.getElementById("c2").src = mydata[n].pfp2;
 }
 //bg
 document.getElementById("display-area").style.backgroundImage = "url("+mydata[n].bg+")";
