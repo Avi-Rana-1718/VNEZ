@@ -42,15 +42,15 @@ body{
        float: right;
        display: block;
        transition: 0.4s;
-       max-width: 100%;
+       width: 300px;
        height: auto;
-       width: 100% \9;
    }
    #c2:hover{
        position:absolute;
        bottom: 50;
        right: 0;
        float: right;
+       width: 310px;
        display: block;
        transition: width 0.4s, height 0.7s;
    }
@@ -62,6 +62,7 @@ body{
        float: right;
        display: block;
        width: 120px;
+       height:auto;
        transition: 0.4s;
       }
             #c2:hover{
