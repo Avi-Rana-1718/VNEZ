@@ -2,11 +2,6 @@
 <head>
 <title>MangaSoap</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon"
-      type="image/png"
-      href="logo.png">
-      <meta charset="UTF-8">
-      <meta name="theme-color" content="#AD7EC2">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <link href="vnCSS.css" rel="stylesheet">
 <!--BODY FONT-->
@@ -27,28 +22,28 @@
 </div>
 </div>
 <!--SCRIPT-->
-<script type="text/javascript" src="AviRana (1).json"></script>
+<script type="text/javascript" src="VNscript.json"></script>
 <script>
 var n = 0;
     var mydata = JSON.parse(data);
     document.getElementById("display-area").style.backgroundImage = "url("+mydata[n].bg+")";
-    if (mydata[n].name == "none") {
+    if (mydata[n].dialog == "none") {
         document.getElementById("dspan").style.display = "none";
     } else {
 document.getElementById("dspan").style.display = "block";
-document.getElementById("dspan").innerHTML = mydata[n].name;
+document.getElementById("dspan").innerHTML = mydata[n].dialog;
 }
 document.getElementById("nspan").innerHTML = mydata[0].ltxt;
 
-if (mydata[n].pfp == "none") {
+if (mydata[n].c1 == "none") {
         document.getElementById("c1").style.display = "none";
     } else {
-document.getElementById("c1").src = mydata[n].pfp;
+document.getElementById("c1").src = mydata[n].c1;
 }
-if (mydata[n].pfp2 == "none") {
+if (mydata[n].c2 == "none") {
         document.getElementById("c2").style.display = "none";
     } else {
-document.getElementById("c2").src = mydata[n].pfp2;
+document.getElementById("c2").src = mydata[n].c2;
 }
 </script>
 <script>
@@ -56,25 +51,25 @@ function next() {
    n = n + 1;
     var mydata = JSON.parse(data);
     // dspan
-if (mydata[n].name == "none") {
+if (mydata[n].dialog == "none") {
         document.getElementById("dspan").style.display = "hidden";
     } else {
 document.getElementById("dspan").style.display = "block";
-document.getElementById("dspan").innerHTML = mydata[n].name;
+document.getElementById("dspan").innerHTML = mydata[n].dialog;
 }
 //c1
-if (mydata[n].pfp == "none") {
+if (mydata[n].c1 == "none") {
         document.getElementById("c1").style.display = "none";
     } else {
 document.getElementById("c1").style.display = "block";
-document.getElementById("c1").src = mydata[n].pfp;
+document.getElementById("c1").src = mydata[n].c1;
 }
 //c2
-if (mydata[n].pfp2 == "none") {
+if (mydata[n].c2 == "none") {
         document.getElementById("c2").style.display = "none";
     } else {
         document.getElementById("c2").style.display = "block";
-document.getElementById("c2").src = mydata[n].pfp2;
+document.getElementById("c2").src = mydata[n].c2;
 }
 //bg
 document.getElementById("display-area").style.backgroundImage = "url("+mydata[n].bg+")";
