@@ -13,13 +13,17 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
-<body>
+<body onload = "type()">
 <!---MAIN-->
  <div id="display-area">
 <img id="c1" src = "pf.jpeg">
-<img id="c2" src = "pf.jpeg">
+<img id="c2" class="img-fluid" src = "pf.jpeg">
    <div id="dialog" onclick="next()">
-<p id="dspan"></p>
+       
+<h4 id="dspan"></h4>
+<span id="nspan"></span>
+<br>
+<br>
 </div>
 </div>
 <!--SCRIPT-->
@@ -31,9 +35,11 @@ var n = 0;
     if (mydata[n].name == "none") {
         document.getElementById("dspan").style.display = "none";
     } else {
-        document.getElementById("dspan").style.display = "block";
+document.getElementById("dspan").style.display = "block";
 document.getElementById("dspan").innerHTML = mydata[n].name;
 }
+document.getElementById("nspan").innerHTML = mydata[0].ltxt;
+
 if (mydata[n].pfp == "none") {
         document.getElementById("c1").style.display = "none";
     } else {
