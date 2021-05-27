@@ -57,7 +57,7 @@ function next() {
     var mydata = JSON.parse(data);
     // dspan
 if (mydata[n].name == "none") {
-        document.getElementById("dspan").style.display = "none";
+        document.getElementById("dspan").style.display = "hidden";
     } else {
 document.getElementById("dspan").style.display = "block";
 document.getElementById("dspan").innerHTML = mydata[n].name;
@@ -80,7 +80,5 @@ document.getElementById("c2").src = mydata[n].pfp2;
 document.getElementById("display-area").style.backgroundImage = "url("+mydata[n].bg+")";
 }
 </script>
-<br>
-  <h6>@Avi Rana</h6>
 </body>
 </html>
