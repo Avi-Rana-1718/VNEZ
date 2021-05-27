@@ -1,0 +1,42 @@
+body{
+        background-color: #282828;
+        color:white;
+        font-family: 'Montserrat', sans-serif;
+    }
+   #display-area{
+       width:100%;
+       height: 100%;
+       margin: 0px;
+       padding-bottom: 30px;
+       position: relative;
+       background-repeat: no-repeat;
+  background-size: 100% 100%;
+       
+   }
+   #dspan{
+       opacity: 2;
+   }
+   #display-area #dialog{
+       padding:6px;
+       background-color:grey;
+       height: 50px;
+       width: 100%;
+       position: absolute;
+        bottom: 0;
+        opacity: 0.5;
+   }
+   #c1{
+       position:absolute;
+       bottom: 50;
+       left: 0;
+       display: block;
+       width: 110px;
+   }
+      #c2{
+       position:absolute;
+       bottom: 50;
+       right: 0;
+       float: right;
+       display: block;
+       width: 110px;
+   }
