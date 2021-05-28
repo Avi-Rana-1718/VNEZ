@@ -1,131 +1,96 @@
 <html>
 <head>
-<title>VNEZ Demo</title>
+<title>VNEZ</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<link href="vnCSS.css" rel="stylesheet">
+<link rel="icon"
+      type="image/png"
+      href="logo.png">
+      <meta charset="UTF-8">
+      <meta name="theme-color" content="#C92C61">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 <!--BODY FONT-->
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
 </head>
+<style>
+body {
+background: linear-gradient(90deg, rgba(242,241,255,1) 0%, rgba(243,243,255,1) 35%, rgba(241,241,243,1) 97%);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+ font-family: 'Montserrat', sans-serif;
+padding:0px;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+#dbg{
+    padding: 10px;
+}
+    .navbar{
+        background-color: #C92C61;
+        color:white;
+    }
+    .navbar-nav{
+        display:show;
+    }
+    .btn-light{
+        background-color: #C92C61;
+        color:white;
+        float:right;
+    }
+    header{
+        border-bottom: 0.001px solid grey;
+    }
+</style>
 <body>
-    
-<!---MAIN-->
- <div id="display-area">
-            <span id="navsp" onclick="openNav()">Open</span>
-            <span id="screen" onclick="openFullscreen()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrows-fullscreen" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z"/>
-</svg></span>
-<!--NAV-->
-<div id="myNav" class="overlay"> 
-    <a href="javascript:void(0)" 
-    class="closebtn" onclick="closeNav()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-  <path d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z"/>
-</svg></a> 
-<div class="overlay-content">
-<a id="VName">Visual Novel</a>
-<a href="#">Settings</a>
-<a href="#">Credits</a>
-</div>
-</div>
-<!--/NAV-->
-<img id="c1" src = "pf.jpeg">
-<img id="c2" class="img-fluid" src = "pf.jpeg">
-   <div id="dialog" onclick="next()">
-<h4 id="dspan"></h4>
-<span id="nspan"></span>
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="">
+      VNEZ</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+                <li class="nav-item">
+          <a class="nav-link" href="#">Docs</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+ <div id="dbg">
+     <header>
+     <h3>Making <b>Visual Novels</b> made easy!</h3>
+     <small>On your browser, for your browser.</small>
+<button type="button" class="btn btn-light" onclick="window.location.href='demo.html';">Demo</button>
 <br>
 <br>
+</header>
+<br>
+<div class="container-lg">
+    <h4>Still in development!</h4>
+    <h5>Docs coming soon!</h5>
 </div>
-</div>
-<!--SCRIPT-->
-<script type="text/javascript" src="VNscript.json"></script>
-<script>
-var n = 0;
-    var mydata = JSON.parse(data);
-    document.getElementById("display-area").style.backgroundImage = "url("+mydata[n].bg+")";
-    if (mydata[n].dialog == "none") {
-        document.getElementById("dspan").style.display = "none";
-    } else {
-document.getElementById("dspan").style.display = "block";
-document.getElementById("dspan").innerHTML = mydata[n].dialog;
-}
-if (mydata[n].c1 == "none") {
-        document.getElementById("c1").style.display = "none";
-    } else {
-document.getElementById("c1").src = mydata[n].c1;
-}
-if (mydata[n].c2 == "none") {
-        document.getElementById("c2").style.display = "none";
-    } else {
-document.getElementById("c2").src = mydata[n].c2;
-}
-//Intilization
-document.getElementById("nspan").innerHTML = mydata[0].ltxt;
-var VNname = mydata[0].name;
-document.getElementById("VName").innerHTML = VNname;
-</script>
-<script>
-function next() {
-   n = n + 1;
-    var mydata = JSON.parse(data);
-    // dspan
-if (mydata[n].dialog == "none") {
-        document.getElementById("dspan").style.display = "hidden";
-    } else {
-document.getElementById("dspan").style.display = "block";
-document.getElementById("dspan").innerHTML = mydata[n].dialog;
-}
-//c1
-if (mydata[n].c1 == "none") {
-        document.getElementById("c1").style.display = "none";
-    } else {
-document.getElementById("c1").style.display = "block";
-document.getElementById("c1").src = mydata[n].c1;
-}
-//c2
-if (mydata[n].c2 == "none") {
-        document.getElementById("c2").style.display = "none";
-    } else {
-        document.getElementById("c2").style.display = "block";
-document.getElementById("c2").src = mydata[n].c2;
-}
-//bg
-document.getElementById("display-area").style.backgroundImage = "url("+mydata[n].bg+")";
-}
-function openFullscreen() {
-    var elem = document.getElementById("display-area");
-  if (elem.requestFullscreen) {
-    elem.requestFullscreen();
-  } else if (elem.mozRequestFullScreen) { /* Firefox */
-    elem.mozRequestFullScreen();
-  } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
-    elem.webkitRequestFullscreen();
-  } else if (elem.msRequestFullscreen) { /* IE/Edge */
-    elem.msRequestFullscreen();
-  }
-}
 
-
-function closeFullscreen() {
-  if (document.exitFullscreen) {
-    document.exitFullscreen();
-  } else if (document.mozCancelFullScreen) { /* Firefox */
-    document.mozCancelFullScreen();
-  } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
-    document.webkitExitFullscreen();
-  } else if (document.msExitFullscreen) { /* IE/Edge */
-    document.msExitFullscreen();
-  }
-}
-function openNav() { 
-            document.getElementById( 
-                "myNav").style.width = "40%"; 
-        } 
-        function closeNav() { 
-            document.getElementById( 
-                "myNav").style.width = "0%"; 
-        } 
-</script>
+<footer>
+  <h6>@Avi Rana</h6>
+  </footer>
+  </div>
 </body>
 </html>
