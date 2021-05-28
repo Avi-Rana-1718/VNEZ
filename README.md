@@ -2,3 +2,4 @@ VN Maker or Visual Novel Maker(name not decided yet) is currently under developm
 Update.
 - Added fullscreen option
 - Added Menu
+- Changed Position for some controls
