@@ -12,29 +12,30 @@
     
 <!---MAIN-->
  <div id="display-area">
+            <span id="navsp" onclick="openNav()">Open</span>
+            <span id="screen" onclick="openFullscreen()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrows-fullscreen" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z"/>
+</svg></span>
+<!--NAV-->
+<div id="myNav" class="overlay"> 
+    <a href="javascript:void(0)" 
+    class="closebtn" onclick="closeNav()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+  <path d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z"/>
+</svg></a> 
+<div class="overlay-content">
+<a id="VName">Visual Novel</a>
+<a href="#">Settings</a>
+<a href="#">Credits</a>
+</div>
+</div>
+<!--/NAV-->
 <img id="c1" src = "pf.jpeg">
 <img id="c2" class="img-fluid" src = "pf.jpeg">
    <div id="dialog" onclick="next()">
-       
 <h4 id="dspan"></h4>
 <span id="nspan"></span>
 <br>
 <br>
-<!--NAV-->
-<div id="myNav" class="overlay"> 
-    <a href="javascript:void(0)" 
-    class="closebtn" onclick="closeNav()">X</a> 
-<div class="overlay-content">
-<a href="#">Visual Novel</a>
-<a href="#">Settings</a>
-<a href="#">Credits</a>
-</div> 
-</div>
-<span onclick="openNav()">open</span>
-<!--/NAV-->
-<span id="screen" onclick="openFullscreen()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrows-fullscreen" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z"/>
-</svg></span>
 </div>
 </div>
 <!--SCRIPT-->
@@ -49,8 +50,6 @@ var n = 0;
 document.getElementById("dspan").style.display = "block";
 document.getElementById("dspan").innerHTML = mydata[n].dialog;
 }
-document.getElementById("nspan").innerHTML = mydata[0].ltxt;
-
 if (mydata[n].c1 == "none") {
         document.getElementById("c1").style.display = "none";
     } else {
@@ -61,6 +60,10 @@ if (mydata[n].c2 == "none") {
     } else {
 document.getElementById("c2").src = mydata[n].c2;
 }
+//Intilization
+document.getElementById("nspan").innerHTML = mydata[0].ltxt;
+var VNname = mydata[0].name;
+document.getElementById("VName").innerHTML = VNname;
 </script>
 <script>
 function next() {
@@ -117,7 +120,7 @@ function closeFullscreen() {
 }
 function openNav() { 
             document.getElementById( 
-                "myNav").style.width = "100%"; 
+                "myNav").style.width = "40%"; 
         } 
         function closeNav() { 
             document.getElementById( 
