@@ -43,7 +43,7 @@ body{
       #c2{
        position:absolute;
        bottom: 50;
-       right: 0;
+       right: 30;
        float: right;
        display: block;
        transition: 0.4s;
@@ -78,4 +78,40 @@ body{
        display: block;
        width: 130px;
        transition: width 0.4s, height 0.7s;
+}
+.overlay {
+height: 100%;
+width: 0;
+position: fixed;
+top: 0;
+left: 0;
+background-color: #C92C61;
+overflow-x: hidden;
+transition: 1.0s;
+    
+}
+.overlay-content {
+position: relative;
+top: 25%;
+width: 100%;
+text-align: left;
+}
+.overlay a {
+padding: 10px;
+text-decoration: none;
+font-size: 40px;
+color: white;
+display: block;
+transition: 0.3s;
+}
+.overlay a:hover, 
+.overlay a:focus {
+    color: black;
+    
+}
+.overlay .closebtn {
+position: absolute;
+top: 10px;
+right: 35px;
+font-size: 70px;
 }
