@@ -16,7 +16,7 @@
    <div id="dialog" onclick="next()">
        
 <h4 id="dspan"></h4>
-<span id="nspan"></span>
+<span id="nspan" onclick="openFullscreen()"></span>
 <br>
 <br>
 </div>
@@ -73,6 +73,31 @@ document.getElementById("c2").src = mydata[n].c2;
 }
 //bg
 document.getElementById("display-area").style.backgroundImage = "url("+mydata[n].bg+")";
+}
+function openFullscreen() {
+    var elem = document.getElementById("display-area");
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.mozRequestFullScreen) { /* Firefox */
+    elem.mozRequestFullScreen();
+  } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+    elem.msRequestFullscreen();
+  }
+}
+
+
+function closeFullscreen() {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.mozCancelFullScreen) { /* Firefox */
+    document.mozCancelFullScreen();
+  } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) { /* IE/Edge */
+    document.msExitFullscreen();
+  }
 }
 </script>
 </body>
