@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <body>
+    
 <!---MAIN-->
  <div id="display-area">
 <img id="c1" src = "pf.jpeg">
@@ -19,6 +20,18 @@
 <span id="nspan"></span>
 <br>
 <br>
+<!--NAV-->
+<div id="myNav" class="overlay"> 
+    <a href="javascript:void(0)" 
+    class="closebtn" onclick="closeNav()">X</a> 
+<div class="overlay-content">
+<a href="#">Visual Novel</a>
+<a href="#">Settings</a>
+<a href="#">Credits</a>
+</div> 
+</div>
+<span onclick="openNav()">open</span>
+<!--/NAV-->
 <span id="screen" onclick="openFullscreen()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrows-fullscreen" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z"/>
 </svg></span>
@@ -102,6 +115,14 @@ function closeFullscreen() {
     document.msExitFullscreen();
   }
 }
+function openNav() { 
+            document.getElementById( 
+                "myNav").style.width = "100%"; 
+        } 
+        function closeNav() { 
+            document.getElementById( 
+                "myNav").style.width = "0%"; 
+        } 
 </script>
 </body>
 </html>
