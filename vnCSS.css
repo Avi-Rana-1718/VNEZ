@@ -79,6 +79,7 @@ body{
        width: 130px;
        transition: width 0.4s, height 0.7s;
 }
+}
 .overlay {
 height: 100%;
 width: 0;
