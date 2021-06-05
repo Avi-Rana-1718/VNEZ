@@ -86,16 +86,29 @@ z-index: 2;
 }
 .overlay-content {
 position: relative;
+display:flex;
+flex-direction: row;
+justify-content: center;
+align-content:center;
 top: 25%;
 width: 100%;
-text-align: left;
+text-align: center;
 }
 .overlay a {
 padding: 10px;
 text-decoration: none;
-font-size: 30px;
 color: white;
 display: block;
+transition: 0.3s;
+}
+.overlay span {
+padding: 10px;
+text-decoration: none;
+color: white;
+bottom: 0;
+right:0;
+display: block;
+position: absolute;
 transition: 0.3s;
 }
 .overlay a:hover, 
@@ -107,7 +120,6 @@ transition: 0.3s;
 position: absolute;
 top: 10px;
 right: 35px;
-font-size: 70px;
 }
 .moverlay {
 height: 100%;
@@ -145,7 +157,42 @@ top: 10px;
 right: 35px;
 font-size: 70px;
 }
-
+.toverlay {
+height: 100%;
+width: 0;
+position: fixed;
+top: 0;
+left: 0;
+background-color: #C92C61;
+overflow-x: hidden;
+transition: 1.0s;
+z-index: 2;
+}
+.toverlay-content {
+position: relative;
+top: 25%;
+width: 100%;
+text-align: left;
+}
+.toverlay a {
+padding: 10px;
+text-decoration: none;
+font-size: 30px;
+color: white;
+display: block;
+transition: 0.3s;
+}
+.toverlay a:hover, 
+.toverlay a:focus {
+    color: black;
+    
+}
+.toverlay .closebtn {
+position: absolute;
+top: 10px;
+right: 35px;
+font-size: 70px;
+}
    @media screen and (max-width: 800px) {
       #c2{
        position:absolute;
@@ -157,5 +204,4 @@ font-size: 70px;
        height:auto;
        transition: 0.4s;
       }
-}
 }
