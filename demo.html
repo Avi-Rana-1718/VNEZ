@@ -3,7 +3,7 @@
 <title>VNEZ Demo</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<link href="VNCSS.css" rel="stylesheet">
+<link href="vnCSS.css" rel="stylesheet">
 <!--BODY FONT-->
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
@@ -27,27 +27,47 @@
   <path d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z"/>
 </svg></a> 
 <div class="overlay-content">
-<a id="VName">Visual Novel</a>
-<a href="#">Settings</a>
-<a onclick="openMenu()">Credits</a>
+<a id="VName"><svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+  <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+</svg></a>
+<a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
+  <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
+</svg></a>
+<a onclick="openMenu()"><svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
+  <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+</svg></a>
 </div>
+<span>VNEZ</span>
 </div>
 <!--/NAV-->
-<!--Menu-->
-<div id="myMenu" class="Moverlay"> 
+<!--Title-->
+<div id="title" class="toverlay"> 
     <a href="javascript:void(0)" 
-    class="closebtn" onclick="closeMenu()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+    class="closebtn" onclick="closeMenu()"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+  <path d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z"/>
+</svg></a> 
+<div class="toverlay-content">
+<a>By <span id="auth"></span></a>
+<small>Made with VNEZ</small>
+</div>
+</div>
+<!--/TITLE->
+<!--Menu-->
+<div id="myMenu" class="moverlay"> 
+    <a href="javascript:void(0)" 
+    class="closebtn" onclick="closeMenu()"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
   <path d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z"/>
 </svg></a> 
 <div class="Moverlay-content">
 <a>By <span id="auth"></span></a>
-<a><small>Made with VNEZ</small></a>
+<small>Made with VNEZ</small>
 </div>
 </div>
 <!--/Menu-->
 <!--/OPTIONS-->
 <img id="c1" src = "pf.jpeg">
-<img id="c2" class="img-fluid" src = "pf.jpeg">
+<img id="c2" src = "pf.jpeg">
    <div id="dialog" onclick="next()">
 <h4 id="dspan"></h4>
 <span id="nspan"></span>
@@ -80,7 +100,6 @@ document.getElementById("c2").src = mydata[n].c2;
 //Intilization
 document.getElementById("nspan").innerHTML = mydata[0].ltxt;
 var VNname = mydata[0].name;
-document.getElementById("VName").innerHTML = VNname;
 document.getElementById("auth").innerHTML = mydata[0].author;
 </script>
 <script>
@@ -138,7 +157,7 @@ function closeFullscreen() {
 }
 function openNav() { 
             document.getElementById( 
-                "myNav").style.width = "40%"; 
+                "myNav").style.width = "100%"; 
         } 
         function closeNav() { 
             document.getElementById( 
@@ -149,6 +168,12 @@ function openMenu() {
         } 
 function closeMenu() {
     document.getElementById("myMenu").style.width = "0%"; 
+        } 
+        function openTitle() { 
+ document.getElementById( "title").style.width = "40%"; 
+        } 
+function closeTitle() {
+    document.getElementById("title").style.width = "0%"; 
         } 
 </script>
 </body>
