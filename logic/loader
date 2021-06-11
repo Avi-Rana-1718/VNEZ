@@ -1,0 +1,23 @@
+var n = 0;
+    var mydata = JSON.parse(data);
+    document.getElementById("display-area").style.backgroundImage = "url("+mydata[n].bg+")";
+    if (mydata[n].dialog == "none") {
+        document.getElementById("dspan").style.display = "none";
+    } else {
+document.getElementById("dspan").style.display = "block";
+document.getElementById("dspan").innerHTML = mydata[n].dialog;
+}
+if (mydata[n].c1 == "none") {
+        document.getElementById("c1").style.display = "none";
+    } else {
+document.getElementById("c1").src = mydata[n].c1;
+}
+if (mydata[n].c2 == "none") {
+        document.getElementById("c2").style.display = "none";
+    } else {
+document.getElementById("c2").src = mydata[n].c2;
+}
+//Intilization
+document.getElementById("nspan").innerHTML = mydata[0].ltxt;
+var VNname = mydata[0].name;
+document.getElementById("auth").innerHTML = mydata[0].author;
