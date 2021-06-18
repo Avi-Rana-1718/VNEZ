@@ -101,11 +101,11 @@ document.getElementById("c2").src = mydata[n].c2;
 document.getElementById("nspan").innerHTML = mydata[0].ltxt;
 var VNname = mydata[0].name;
 document.getElementById("auth").innerHTML = mydata[0].author;
-var snd = new Audio("bg.mp3");
-snd.play();
 </script>
 <script>
 function next() {
+var snd = new Audio("bg.mp3");
+snd.play();
    n = n + 1;
     var mydata = JSON.parse(data);
     // dspan
