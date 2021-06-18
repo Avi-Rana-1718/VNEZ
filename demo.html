@@ -77,7 +77,33 @@
 </div>
 <!--SCRIPT-->
 <script type="text/javascript" src="VNscript.json"></script>
-<script src="https://firebasestorage.googleapis.com/v0/b/mangasoap-39388.appspot.com/o/post.js?alt=media&token=8d55a7a0-7193-4bbe-a123-036b90ff0f72.js"></script>
+<script>
+    var n = 0;
+    var mydata = JSON.parse(data);
+    document.getElementById("display-area").style.backgroundImage = "url("+mydata[n].bg+")";
+    if (mydata[n].dialog == "none") {
+        document.getElementById("dspan").style.display = "none";
+    } else {
+document.getElementById("dspan").style.display = "block";
+document.getElementById("dspan").innerHTML = mydata[n].dialog;
+}
+if (mydata[n].c1 == "none") {
+        document.getElementById("c1").style.display = "none";
+    } else {
+document.getElementById("c1").src = mydata[n].c1;
+}
+if (mydata[n].c2 == "none") {
+        document.getElementById("c2").style.display = "none";
+    } else {
+document.getElementById("c2").src = mydata[n].c2;
+}
+//Intilization
+document.getElementById("nspan").innerHTML = mydata[0].ltxt;
+var VNname = mydata[0].name;
+document.getElementById("auth").innerHTML = mydata[0].author;
+var snd = new Audio("bg.mp3");
+snd.play;
+</script>
 <script>
 function next() {
    n = n + 1;
