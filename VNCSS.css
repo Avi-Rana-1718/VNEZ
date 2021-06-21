@@ -58,15 +58,15 @@ body{
    #c1{
        position:absolute;
        bottom: 50;
-       left: 30;
+       left: 600;
        display: block;
-       width: 110px;
+       width: 300px;
    }
       #c2{
        position:absolute;
        bottom: 50;
-       right: 30;
-       float: right;
+       right: 0;
+       margin-right: 6%;
        display: block;
        transition: 0.4s;
        width: 300px;
@@ -195,14 +195,8 @@ font-size: 70px;
 }
    @media screen and (max-width: 800px) {
       #c2{
-       position:absolute;
-       bottom: 50;
-       right: 0;
-       float: right;
-       display: block;
        width: 130px;
        height:auto;
-       transition: 0.4s;
       }
 }
 }
