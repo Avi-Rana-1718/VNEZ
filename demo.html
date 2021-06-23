@@ -41,7 +41,7 @@
 <span>VNEZ</span>
 </div>
 <!--/NAV-->
-<!--Title-->
+<!--Info-->
 <div id="title" class="toverlay"> 
     <a href="javascript:void(0)" 
     class="closebtn" onclick="closeMenu()"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
@@ -66,14 +66,13 @@
 </div>
 <!--/Menu-->
 <!--/OPTIONS-->
-<img id="c1" src = "pf.jpeg">
-<img id="c2" src = "pf.jpeg">
    <div id="dialog" onclick="next()">
 <h4 id="dspan"></h4>
-<span id="nspan"></span>
 <br>
 <br>
 </div>
+<img id="c1" src = "pf.jpeg">
+<img id="c2" src = "pf.jpeg">
 </div>
 <!--SCRIPT-->
 <script type="text/javascript" src="VNscript.json"></script>
@@ -99,7 +98,6 @@ document.getElementById("c2").src = mydata[n].c2;
 }
 
 //Intilization
-document.getElementById("nspan").innerHTML = mydata[0].ltxt;
 var VNname = mydata[0].name;
 document.getElementById("auth").innerHTML = mydata[0].author;
 </script>
