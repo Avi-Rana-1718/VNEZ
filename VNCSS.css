@@ -27,6 +27,7 @@ body{
    #dspan{
        opacity: 2;
        z-index: 1;
+       color:black;
    }
    #screen{
        top: 0;
@@ -44,12 +45,18 @@ body{
        padding: 1px;
        display:inline-block;
    }
+   #options img{
+       margin: 0px;
+       padding: 0px;
+   }
    #btncon{
        padding: 4px;
    }
    #dialog{
        padding:6px;
-       background-color:grey;
+       border:1px solid black;
+       background-color:white;
+       border-radius:3px;
        height: 50px;
        width: 100%;
        position: absolute;
