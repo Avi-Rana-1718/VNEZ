@@ -29,25 +29,18 @@ body{
        z-index: 1;
        color:black;
    }
-   #screen{
+   .options{
        top: 0;
-       background-color: grey;
-       opacity:0.7;
+       background-color: #f3f3f3;
+color:black;
        border-radius: 4px;
-       padding: 1px;
+       padding: 4px;
        display:inline-block;
+       border:0.1px solid black;
    }
-   #options{
-       top: 0;
-       background-color: grey;
-       opacity:0.7;
-       border-radius: 4px;
-       padding: 1px;
-       display:inline-block;
-   }
-   #options img{
-       margin: 0px;
-       padding: 0px;
+   .options:hover{
+      background-color:black;
+color:#f3f3f3;
    }
    #btncon{
        padding: 4px;
@@ -62,7 +55,7 @@ body{
        position: absolute;
         bottom: 0;
         opacity: 0.8;
-        margin: 10px;
+        margin-bottom: 10px;
         z-index: 1;
    }
    #c1{
@@ -134,77 +127,22 @@ position: absolute;
 top: 10px;
 right: 35px;
 }
-.moverlay {
-height: 100%;
-width: 0;
-position: fixed;
-top: 0;
-left: 0;
-background-color: #C92C61;
-overflow-x: hidden;
-transition: 1.0s;
-z-index: 2;
+#nfscreenopt {
+display:none;
 }
-.moverlay-content {
-position: relative;
-top: 25%;
-width: 100%;
-text-align: left;
+#title {
+clip-path: polygon(0 0, 99% 0, 69% 100%, 0% 100%);
+text-align:center;
 }
-.moverlay a {
-padding: 10px;
-text-decoration: none;
-font-size: 30px;
-color: white;
-display: block;
-transition: 0.3s;
+#title a {
+display:block;
+font-family: 'Poppins', sans-serif;
 }
-.moverlay a:hover, 
-.moverlay a:focus {
-    color: black;
-    
-}
-.moverlay .closebtn {
-position: absolute;
-top: 10px;
-right: 35px;
-font-size: 70px;
-}
-.toverlay {
-height: 100%;
-width: 0;
-position: fixed;
-top: 0;
-left: 0;
-background-color: #C92C61;
-overflow-x: hidden;
-transition: 1.0s;
-z-index: 2;
-}
-.toverlay-content {
-position: relative;
-top: 25%;
-width: 100%;
-text-align: left;
-}
-.toverlay a {
-padding: 10px;
-text-decoration: none;
-font-size: 30px;
-color: white;
-display: block;
-transition: 0.3s;
-}
-.toverlay a:hover, 
-.toverlay a:focus {
-    color: black;
-    
-}
-.toverlay .closebtn {
-position: absolute;
-top: 10px;
-right: 35px;
-font-size: 70px;
+#title button {
+padding:4px;
+background-color: transparent;
+border-radius:3px;
+border:2px solid white;
 }
    @media screen and (max-width: 800px) {
       #c2{

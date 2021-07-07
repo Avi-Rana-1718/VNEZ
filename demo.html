@@ -7,25 +7,32 @@
 <!--BODY FONT-->
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
 <!---MAIN-->
  <div id="display-area">
      <div id="btncon">
-            <span id="options" onclick="openNav()"><img width="21" src = "https://cdn.discordapp.com/attachments/798241715663798275/857320978035638360/list.svg"></span>
-            <span id="screen" onclick="openFullscreen()"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor" class="bi bi-arrows-fullscreen" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z"/>
+            <span class="options" onclick="openNav()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-option" viewBox="0 0 16 16">
+  <path d="M1 2.5a.5.5 0 0 1 .5-.5h3.797a.5.5 0 0 1 .439.26L11 13h3.5a.5.5 0 0 1 0 1h-3.797a.5.5 0 0 1-.439-.26L5 3H1.5a.5.5 0 0 1-.5-.5zm10 0a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5z"/>
+</svg></span>
+            <span class="options" id="openscreen"><svg id="fscreenopt" onclick="openFullscreen()" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-fullscreen" viewBox="0 0 16 16">
+  <path d="M1.5 1a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4A1.5 1.5 0 0 1 1.5 0h4a.5.5 0 0 1 0 1h-4zM10 .5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 16 1.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zM.5 10a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 0 14.5v-4a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v4a1.5 1.5 0 0 1-1.5 1.5h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5z"/>
+</svg>
+<!--CLOSE FULLSCREEN SVG--><svg id="nfscreenopt" onclick="closeFullscreen()" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-fullscreen-exit" viewBox="0 0 16 16">
+  <path d="M5.5 0a.5.5 0 0 1 .5.5v4A1.5 1.5 0 0 1 4.5 6h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5zm5 0a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 10 4.5v-4a.5.5 0 0 1 .5-.5zM0 10.5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 6 11.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zm10 1a1.5 1.5 0 0 1 1.5-1.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4z"/>
 </svg></span>
 </div>
 <!--OPTIONS-->
     <!--NAV-->
-<div id="myNav" class="overlay"> 
+<div id="nav" class="overlay"> 
     <a href="javascript:void(0)" 
     class="closebtn" onclick="closeNav()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
   <path d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z"/>
 </svg></a> 
 <div class="overlay-content">
-<a id="VName"><svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
+<a onclick="openTitle()"><svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
   <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
 </svg></a>
@@ -39,27 +46,24 @@
 <span>VNEZ</span>
 </div>
 <!--/NAV-->
-<!--Info-->
-<div id="title" class="toverlay"> 
-    <a href="javascript:void(0)" 
-    class="closebtn" onclick="closeMenu()"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-  <path d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z"/>
-</svg></a> 
-<div class="toverlay-content">
-<a>By <span id="auth"></span></a>
-<small>Made with VNEZ</small>
+<!--TITLE-->
+<div id="title" class="overlay"> 
+<div class="overlay-content">
+<a><h2><b>Legend Of Love!</b></h2></a>
+<a><button>Play</button></a>
 </div>
+
 </div>
 <!--/TITLE->
 <!--Menu-->
-<div id="myMenu" class="moverlay"> 
+<div id="menu" class="overlay"> 
     <a href="javascript:void(0)" 
     class="closebtn" onclick="closeMenu()"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
   <path d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z"/>
 </svg></a> 
-<div class="Moverlay-content">
+<div class="menu-content">
 <a>By <span id="auth"></span></a>
-<small>Made with VNEZ</small>
+<small>Made with VNEZs</small>
 </div>
 </div>
 <!--/Menu-->
@@ -130,6 +134,8 @@ document.getElementById("display-area").style.backgroundImage = "url("+mydata[n]
 }
 function openFullscreen() {
     var elem = document.getElementById("display-area");
+ document.getElementById("nfscreenopt").style.display = "inline";
+document.getElementById("fscreenopt").style.display = "none";
   if (elem.requestFullscreen) {
     elem.requestFullscreen();
   } else if (elem.mozRequestFullScreen) { /* Firefox */
@@ -143,6 +149,8 @@ function openFullscreen() {
 
 
 function closeFullscreen() {
+document.getElementById("fscreenopt").style.display = "inline";
+document.getElementById("nfscreenopt").style.display = "none";
   if (document.exitFullscreen) {
     document.exitFullscreen();
   } else if (document.mozCancelFullScreen) { /* Firefox */
@@ -155,17 +163,17 @@ function closeFullscreen() {
 }
 function openNav() { 
             document.getElementById( 
-                "myNav").style.width = "100%"; 
+                "nav").style.width = "100%"; 
         } 
         function closeNav() { 
             document.getElementById( 
-                "myNav").style.width = "0%"; 
+                "nav").style.width = "0%"; 
         }
 function openMenu() { 
- document.getElementById( "myMenu").style.width = "100%"; 
+ document.getElementById( "menu").style.width = "100%"; 
         } 
 function closeMenu() {
-    document.getElementById("myMenu").style.width = "0%"; 
+    document.getElementById("menu").style.width = "0%"; 
         } 
         function openTitle() { 
  document.getElementById( "title").style.width = "40%"; 
