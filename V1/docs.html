@@ -9,11 +9,13 @@
       <meta name="theme-color" content="#C92C61">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+      <script src="https://kit.fontawesome.com/3a3c813962.js" crossorigin="anonymous"></script>      
 <!--BODY FONT-->
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
 </head>
 <style>
 body {
@@ -72,11 +74,14 @@ padding:0px;
     .codecenter{
         margin-left: 25px;
     }
+    #brand{
+        font-family: 'Ubuntu', sans-serif;
+    }
 </style>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="">
+    <a id="brand" class="navbar-brand" href="">
       VNEZ</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         
@@ -119,7 +124,7 @@ padding:0px;
 <br>
 <br>
 <div id="1div">
-    <h5><b>Getting started</b></h5>
+    <h5><i class="fas fa-flag"></i> <b>Getting started</b></h5>
     VNEZ or Visual Novels made eazy is basically just a bunch of pre-coded files that save you from the hassle of researching, learning and writing everything yourself and saves your time! It is pretty useful for people who don't know how to code. VNEZ currently has the following features
     <br><br>
     <ul>
@@ -128,7 +133,7 @@ padding:0px;
     </ul>
 </div>
 <div id="2div">
-<h5><b>Installation</b></h5>
+<h5><i class="fas fa-download"></i> <b>Installation</b></h5>
 Download the three, they should be kept in the same folder. If the script or styling doesn't work, check whether all three of them are kept in the same folder.
 <br><br>
 <button type="button" class="gb"><a href="../VNscript.json" download>VNScript</a></button>
@@ -137,7 +142,7 @@ Download the three, they should be kept in the same folder. If the script or sty
 </div>
 <br>
 <div id="3div">
-    <h5><b>Editing</b></h5>
+    <h5><i class="fas fa-edit"></i> <b>Editing</b></h5>
    We suggest that you shouldn't edit the <mark>HTML</mark> file and just stick to <mark>VNCSS</mark> and <mark>VNScript</mark>.
    <br><br>
    <mark>VNCSS</mark> contains all the styling for the Visual Novel and <mark>VNScript</mark> will be the document that shall contain all the dialogs and other assets.
@@ -146,7 +151,7 @@ Download the three, they should be kept in the same folder. If the script or sty
 <div id="4div">
     <h6><b>VNScript</b></h6>
     <mark>VNScript</mark> is the place where are the dialogs, background images, character assets are accessed from. Here's a quick peek on how the script shall look.
-    <br><br><br>
+    <br><br>
     <div id="4divcode">
     <code>
         data = '[{"dialog" : "Text", "bg" : "bg.png", "c1" : "none", "c2" : "none", "ltxt" : "...", "name" : "Legend Of Love!", "author" : "AviRana"},{"dialog" : "Ohayo, Senpai!", "bg" : "bg.png", "c1" : "none", "c2" : "boy_normal.png"},{"dialog" : "How are you?", "bg" : "bg_sky.png", "c1" : "none", "c2" : "girl.png"}]';</code>
@@ -178,15 +183,18 @@ Download the three, they should be kept in the same folder. If the script or sty
     All the parameters must be written inside " " with proper spacing. View some <a href="#">examples</a> to clarify any doubts.
   </div>
 </div>
+
 </div>
 </div>
  <div id="5div">
         <!--VNCSS-->
         <h6><b>VNCSS</b></h6>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
         </div>
+        <br>
          <div id="6div">
         <!--CUSTOMIZATION-->
-        <h5><b>Customization</b></h5>
+        <h5><i class="fas fa-cut"></i> <b>Customization</b></h5>
         VNEZ provides alot of customization options. You can edit the games environment and assets in <mark>VNCSS</mark> - as mentioned above.<br><br>
         In this secton we'll explain how to edit all the icons and fonts.<br>
         <h5><b>Icons</b></h5>
