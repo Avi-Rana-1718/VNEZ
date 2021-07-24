@@ -1,16 +1,16 @@
-body{
+body {
         background-color: #282828;
         color:white;
         font-family: 'Montserrat', sans-serif;
         overflow:hidden;
     }
-    #brand{
+    #brand {
         bottom: 0;
         right: 5;
         float: right;
         opacity: 0.7;
     }
-   #display-area{
+   #display-area {
        width:100%;
        height: 100%;
        margin: 0px;
@@ -21,31 +21,34 @@ body{
   z-index: 1;
        
    }
-   #nspan{
+   #nspan {
        float: right;
    }
-   #dspan{
+   #dspan {
        opacity: 2;
        z-index: 1;
        color:black;
    }
-   .options{
+   #screen {
        top: 0;
-       background-color: #f3f3f3;
-color:black;
+       background-color: grey;
+       opacity:0.7;
        border-radius: 4px;
-       padding: 4px;
+       padding: 1px;
        display:inline-block;
-       border:0.1px solid black;
    }
-   .options:hover{
-      background-color:black;
-color:#f3f3f3;
+   .options {
+       top: 0;
+       background-color: black;
+       opacity:0.7;
+       border-radius: 4px;
+       padding: 6px;
+       display:inline-block;
    }
-   #btncon{
+   #btncon {
        padding: 4px;
    }
-   #dialog{
+   #dialog {
        padding:6px;
        border:1px solid black;
        background-color:white;
@@ -55,10 +58,10 @@ color:#f3f3f3;
        position: absolute;
         bottom: 0;
         opacity: 0.8;
-        margin-bottom: 10px;
+        margin: 10px;
         z-index: 1;
    }
-   #c1{
+   #c1 {
        position:absolute;
        bottom: 0;
        left: 0;
@@ -68,7 +71,7 @@ color:#f3f3f3;
        width: 300px;
        height: auto;
    }
-      #c2{
+      #c2 {
        position:absolute;
        bottom: 0;
        right: 0;
@@ -78,7 +81,24 @@ margin-right: 6%;
        width: 300px;
        height: auto;
    }
-
+#title {
+    height: 100%;
+width: 0;
+position: fixed;
+top: 0;
+left: 0;
+background-color: #C92C61;
+overflow-x: hidden;
+transition: 1.0s;
+z-index: 2;
+}
+#title a {
+    padding: 10px;
+text-decoration: none;
+color: white;
+display: block;
+transition: 0.3s;
+}
 .overlay {
 height: 100%;
 width: 0;
@@ -105,6 +125,7 @@ padding: 10px;
 text-decoration: none;
 color: white;
 display: block;
+font-size: 85px;
 transition: 0.3s;
 }
 .overlay span {
@@ -126,23 +147,79 @@ transition: 0.3s;
 position: absolute;
 top: 10px;
 right: 35px;
+font-size: 35px;
 }
-#nfscreenopt {
-display:none;
+.moverlay {
+height: 100%;
+width: 0;
+position: fixed;
+top: 0;
+left: 0;
+background-color: #C92C61;
+overflow-x: hidden;
+transition: 1.0s;
+z-index: 2;
 }
-#title {
-clip-path: polygon(0 0, 99% 0, 69% 100%, 0% 100%);
-text-align:center;
+.moverlay-content {
+position: relative;
+top: 25%;
+width: 100%;
+text-align: left;
 }
-#title a {
-display:block;
-font-family: 'Poppins', sans-serif;
+.moverlay a {
+padding: 10px;
+text-decoration: none;
+font-size: 30px;
+color: white;
+display: block;
+transition: 0.3s;
 }
-#title button {
-padding:4px;
-background-color: transparent;
-border-radius:3px;
-border:2px solid white;
+.moverlay a:hover, 
+.moverlay a:focus {
+    color: black;
+    
+}
+.moverlay .closebtn {
+position: absolute;
+top: 10px;
+right: 35px;
+font-size: 70px;
+}
+.toverlay {
+height: 100%;
+width: 0;
+position: fixed;
+top: 0;
+left: 0;
+background-color: #C92C61;
+overflow-x: hidden;
+transition: 1.0s;
+z-index: 2;
+}
+.toverlay-content {
+position: relative;
+top: 25%;
+width: 100%;
+text-align: left;
+}
+.toverlay a {
+padding: 10px;
+text-decoration: none;
+font-size: 30px;
+color: white;
+display: block;
+transition: 0.3s;
+}
+.toverlay a:hover, 
+.toverlay a:focus {
+    color: black;
+    
+}
+.toverlay .closebtn {
+position: absolute;
+top: 10px;
+right: 35px;
+font-size: 70px;
 }
    @media screen and (max-width: 800px) {
       #c2{
