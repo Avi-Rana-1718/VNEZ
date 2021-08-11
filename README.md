@@ -1,6 +1,6 @@
-VN Maker or Visual Novel Maker(name not decided yet) is currently under development.
-Update.
-DOCS available!
-- Added fullscreen option
-- Added Menu
-- Changed Position for some controls
+VNEZ is a tool to create visual novels in HTML. It is  currently under development.
+Some features
+- Easy to use
+- Menu's and other stuff
+- Audio and background music
+- Fully customisable
