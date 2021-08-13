@@ -15,15 +15,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500&display=swap" rel="stylesheet">
 </head>
 <style>
 body {
-background: linear-gradient(90deg, rgba(242,241,255,1) 0%, rgba(243,243,255,1) 35%, rgba(241,241,243,1) 97%);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
  font-family: 'Montserrat', sans-serif;
 padding:0px;
 }
@@ -41,13 +38,10 @@ padding:0px;
 }
 #dbg{
     padding: 10px;
-}
-#div1{
-    display: flex;
+    height: 100%;
 }
 #div1 img{
-    position: absolute;
-    right: 0;
+    display: block;
 }
     .navbar{
         background-color: #C92C61;
@@ -61,14 +55,46 @@ padding:0px;
         color:white;
         float:right;
     }
-    header{
-        border-bottom: 0.001px solid grey;
+    footer {
+        margin: 0px;
+        width: 100%;
+        background-color: #f3f3f3;
+        color:black;
+        padding: 15px;
+        text-align:center;
     }
-    footer{
-        margin: 15px;
+    footer a {
+        margin: 4px;
+        font-size: 27px;
+        color: grey;
     }
-    #brand{
+    #brand {
         font-family: 'Ubuntu', sans-serif;
+    }
+    .hitem {
+        border-radius: 3px;
+        background-color: #f3f3f3;
+        padding: 15px;
+        margin:14px;
+        text-align: center;
+    }
+    .hitem b {
+        font-family: 'Manrope', sans-serif;
+    }
+    .hitem b i {
+        padding: 8px;
+        border-radius: 3px;
+        font-size: 20px;
+        color: white;
+    }
+    #i1 {
+        background-color: #EB4899;
+    }
+    #i2 {
+        background-color: #8B5CF6;
+    }
+    #i3 {
+        background-color: #10B982;
     }
 </style>
 <body>
@@ -97,18 +123,33 @@ padding:0px;
      <small>On your browser, for your browser.</small>
 <button type="button" class="btn btn-light" onclick="window.location.href='demo.html';">Demo</button>
 <br>
-<br>
 </header>
 <br>
-<div id="div1">
+<hr>
+<div id="div1" class="d-flex <justify-content-between">
     <h4><i class="fas fa-book"></i> <b>Documentation now available!</b></h4>
     <img src="https://cdn.discordapp.com/emojis/668024722210029568.gif">
 
 </div>
-
-<footer>
+<hr>
+<div class:"d-flex justify-content-center">
+    <h6><b>Highlights</b></h6>
+    <div class="hitem d-flex justify-content-center">
+        <b><i id="i1" class="fas fa-globe"></i> <br>Make visual novels for the web!</b>
+    </div>
+    <div class="hitem d-flex justify-content-center">
+        <b><i id="i2" class="fas fa-book-open"></i><br>Highly customizable!</b>
+    </div>
+    <div class="hitem d-flex justify-content-center">
+        <b><i id="i3" class="fas fa-mobile-alt"></i><br>Playable on both mobile & PC!</b>
+        </div>
+</div>
+  </div>
+  <footer>
+      <a href="https://www.twitter.com/_AviRana"><i class="fab fa-twitter"></i></a>
+      <a href="https://github.com/Avi-Rana-1718"><i class="fab fa-github"></i></a>
+      <br>
   <h6>@Avi Rana</h6>
   </footer>
-  </div>
 </body>
 </html>
