@@ -4,11 +4,8 @@ body {
         font-family: 'Montserrat', sans-serif;
         overflow:hidden;
     }
-    #brand {
-        bottom: 0;
-        right: 5;
-        float: right;
-        opacity: 0.7;
+    .brand {
+font-family: 'Manrope', sans-serif;
     }
    #display-area {
        width:100%;
@@ -107,7 +104,7 @@ width: 0;
 position: fixed;
 top: 0;
 left: 0;
-background-color: #C92C61;
+background-color: #9881E9;
 overflow-x: hidden;
 transition: 1.0s;
 z-index: 2;
