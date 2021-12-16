@@ -9,7 +9,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
- <script src="https://kit.fontawesome.com/3a3c813962.js" crossorigin="anonymous"></script>      
+ <script src="https://kit.fontawesome.com/3a3c813962.js" crossorigin="anonymous"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 <!---MAIN-->
@@ -55,7 +56,7 @@
 <!--/Menu-->
 <!--/OPTIONS-->
    <div id="dialog" onclick="next()">
-       <span id="dauthor">Avi</span>
+       <span id="author">Avi</span>
 <span id="dspan"></span>
 <br>
 <br>
@@ -64,72 +65,85 @@
 <img id="c2" src = "pf.jpeg">
 </div>
 <!--SCRIPT-->
-<script type="text/javascript" src="VNscript.json"></script>
 <script>
-    var n = 0;
-    var mydata = JSON.parse(data);
-    document.getElementById("display-area").style.backgroundImage = "url("+mydata[n].bg+")";
-    if (mydata[n].dialog == "none") {
+var data ='{"dialog":["Bright colours","sex"],"bg" : ["https://media.discordapp.net/attachments/798241715663798275/857315327951241276/20210623_231337.png"],"c1" : ["none","none"],"c2" : ["none","none"],"ID" : "Legend Of Love!","writer" : "AviRana","author" : ["nne","2"]}';
+var n = 0;
+var script = JSON.parse(data);
+
+// BACKGROUND
+    document.getElementById("display-area").style.backgroundImage = "url("+script.bg[n]+")";
+    
+// DIALOG
+    if (script.dialog[n] == "none") {
         document.getElementById("dspan").style.display = "none";
     } else {
 document.getElementById("dspan").style.display = "block";
-document.getElementById("dspan").innerHTML = mydata[n].dialog;
-}
-if (mydata[n].c1 == "none") {
-        document.getElementById("c1").style.display = "none";
-    } else {
-document.getElementById("c1").src = mydata[n].c1;
-}
-if (mydata[n].c2 == "none") {
-        document.getElementById("c2").style.display = "none";
-    } else {
-document.getElementById("c2").src = mydata[n].c2;
+document.getElementById("dspan").innerHTML = script.dialog[n];
 }
 
-if (mydata[n].dauthor == "none") {
-        document.getElementById("dauthor").style.display = "none";
+//author
+if (script.author[n] == "none") {
+        document.getElementById("author").style.display = "none";
     } else {
-document.getElementById("dauthor").style.display = "block";
-document.getElementById("dauthor").innerHTML = mydata[n].dauthor;
+document.getElementById("author").style.display = "block";
+document.getElementById("author").innerHTML = script.author[n];
 }
-//Intilization
-var VNname = mydata[0].name;
-document.getElementById("auth").innerHTML = mydata[0].author;
-</script>
-<script>
+
+// CHARACTER1
+if (script.c1[n] == "none") {
+        document.getElementById("c1").style.display = "none";
+    } else {
+document.getElementById("c1").src = script.c1[n];
+}
+// CHARACTER2
+if (script.c2[n] == "none") {
+        document.getElementById("c2").style.display = "none";
+    } else {
+document.getElementById("c2").src = script.c2[n];
+}
+
+// Intilization
+var VNID = script.ID;
+document.getElementById("auth").innerHTML = script.writer;
+
+// NEXT
 function next() {
    n = n + 1;
-    var mydata = JSON.parse(data);
-    // dspan
-if (mydata[n].dialog == "none") {
+   
+// DIALOG
+if (script.dialog[n] == "none") {
         document.getElementById("dspan").style.display = "hidden";
     } else {
 document.getElementById("dspan").style.display = "block";
-document.getElementById("dspan").innerHTML = mydata[n].dialog;
+document.getElementById("dspan").innerHTML = script.dialog[n];
 }
 //c1
-if (mydata[n].c1 == "none") {
+if (script.c1[n] == "none") {
         document.getElementById("c1").style.display = "none";
     } else {
 document.getElementById("c1").style.display = "block";
-document.getElementById("c1").src = mydata[n].c1;
+document.getElementById("c1").src = script.c1[n];
 }
 //c2
-if (mydata[n].c2 == "none") {
+if (script.c2[n] == "none") {
         document.getElementById("c2").style.display = "none";
     } else {
         document.getElementById("c2").style.display = "block";
-document.getElementById("c2").src = mydata[n].c2;
+document.getElementById("c2").src = script.c2[n];
 }
 //bg
-document.getElementById("display-area").style.backgroundImage = "url("+mydata[n].bg+")";
-//dauthor
-if (mydata[n].dauthor == "none") {
-        document.getElementById("dauthor").style.display = "none";
+document.getElementById("display-area").style.backgroundImage = "url("+script.bg[n]+")";
+//author
+if (script.author[n] == "none") {
+        document.getElementById("author").style.display = "none";
     } else {
-document.getElementById("dauthor").style.display = "block";
-document.getElementById("dauthor").innerHTML = mydata[n].dauthor;
+document.getElementById("author").style.display = "block";
+document.getElementById("author").innerHTML = script.author[n];
 }
+//music
+var Audio = document.createElement("audio");
+Audio.src = script.audio[n];
+Audio.play();
 }
 </script>
 <script>
@@ -182,7 +196,6 @@ function closeMenu() {
 function closeTitle() {
     document.getElementById("title").style.width = "0%"; 
         } 
-
 </script>
 </body>
 </html>
