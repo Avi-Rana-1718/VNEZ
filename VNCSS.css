@@ -27,10 +27,10 @@ body {
    #dspan {
        opacity: 2;
        z-index: 1;
-       color:black;
+font-family: 'Sora', sans-serif;
    }
-   #dauthor {
-       color:black;
+   #author {
+       font-family: 'Sora', sans-serif;
    }
    #screen {
        top: 0;
@@ -53,9 +53,9 @@ body {
    }
    #dialog {
        padding:6px;
-       border:1px solid black;
-       background-color:white;
-       border-radius:3px;
+       color:white;
+       background-color:#282828;
+       border-radius:1px;
        width: 100%;
        position: absolute;
         bottom: 0;
@@ -70,8 +70,8 @@ body {
        margin-right: 6%;
        display: block;
        transition: 0.4s;
-       width: 300px;
-       height: auto;
+       width: auto;
+       height: 250px;
    }
       #c2 {
        position:absolute;
