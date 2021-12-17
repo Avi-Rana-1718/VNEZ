@@ -11,6 +11,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap" rel="stylesheet">
  <script src="https://kit.fontawesome.com/3a3c813962.js" crossorigin="anonymous"></script>
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
@@ -34,25 +36,23 @@
 <a href="#"><i class="fas fa-cog"></i></a>
 <a onclick="openMenu()"><i class="fas fa-info-circle"></i></a>
 </div>
-<span>VNEZ</span>
+<span class="brand">VNEZ</span>
 </div>
 <!--/NAV-->
 <!--TITLE-->
 <div id="title"> 
-<div class="overlay-content">
-<a><h2><b>Name</b></h2></a>
-<a><button>Play</button></a>
-</div>
+<a><h2 id="tspan"><b>Name</b></h2></a>
+<a onclick="closeTitle()"><b><i class="fas fa-play"></i> Play</b></a>
+<a><b><i class="fas fa-cog"></i> Settings</b></a>
 
 </div>
 <!--/TITLE->
 <!--Menu-->
 <div id="menu" class="overlay"> 
-    <a href="javascript:void(0)" 
-    class="closebtn" onclick="closeMenu()"><h1><i class="fas fa-times"></i></h1></a> 
-<div class="menu-content">
-<a>By <span id="auth"></span></a>
-<small>Made with VNEZ</small>
+<div>
+Author: <h6 id="auth"></h6>
+Version: 
+Made with <span class ="brand">VNEZ</span>
 </div>
 </div>
 <!--/Menu-->
@@ -106,6 +106,7 @@ document.getElementById("c2").src = script.c2[n];
 
 // Intilization
 var VNID = script.ID;
+document.getElementById("tspan").innerHTML = VNID;
 document.getElementById("auth").innerHTML = script.writer;
 
 // NEXT
