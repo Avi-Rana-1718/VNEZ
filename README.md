@@ -1,6 +1,2 @@
 VNEZ is a tool to create visual novels in HTML. It is  currently under development.
-Some features
-- Easy to use
-- Menu's and other stuff
-- Audio and background music
-- Fully customisable
+Read (docs)[https://avi-rana-1718.github.io/VNEZ/V1/docs.html] for more info!
