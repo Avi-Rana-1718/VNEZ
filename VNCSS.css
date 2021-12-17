@@ -223,9 +223,9 @@ right: 35px;
 font-size: 70px;
 }
    @media screen and (max-width: 800px) {
-      #c2{
-       width: 130px;
-       height:auto;
+      #c1{
+       width: auto;
+       height:300px;
       }
 }
 }
