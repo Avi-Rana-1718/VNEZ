@@ -68,7 +68,7 @@ font-family: 'Sora', sans-serif;
        display: block;
        transition: 0.4s;
        width: auto;
-       height: 250px;
+       height: 55vh;
    }
       #c2 {
        position:absolute;
@@ -77,8 +77,8 @@ font-family: 'Sora', sans-serif;
 margin-right: 6%;
        display: block;
        transition: 0.4s;
-       width: 300px;
-       height: auto;
+       width: auto;
+       height: 55vh;
    }
 #title {
     clip-path: polygon(0 0, 99% 0, 80% 100%, 0% 100%);
@@ -98,7 +98,11 @@ z-index: 3;
 text-decoration: none;
 color: white;
 display: block;
+font-size:30px;
 transition: 0.3s;
+}
+#tspan {
+font-size:45px;
 }
 .overlay {
 height: 100%;
@@ -126,7 +130,7 @@ padding: 10px;
 text-decoration: none;
 color: white;
 display: block;
-font-size: 85px;
+font-size:120px;
 transition: 0.3s;
 }
 .overlay span {
@@ -223,8 +227,21 @@ right: 35px;
 font-size: 70px;
 }
    @media screen and (max-width: 800px) {
-      #c1{
-       width: auto;
-       height:300px;
-      }
+#c1 {
+height:260px;
+      
+}
+#c2 {
+height:260px;
+}
+
+.overlay a { 
+font-size:85px;
+}
+#title a {
+font-size:16px;
+}
+#tspan {
+font-size:32px;
+}
 }
